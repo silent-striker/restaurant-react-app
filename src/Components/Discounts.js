@@ -8,7 +8,7 @@ function Discounts({showPopUp, setShowPopUp, handleClose}) {
         <div className="card-body">
             <h5 className="card-title">Discounts</h5>
             <div className="top-button">
-                <button className="btn btn-primary">All Discounts</button>
+                <button className="btn btn-primary" onClick={() => alert("All discounts button was clicked")}>All Discounts</button>
             </div>
 
             <div className="bottom-button">

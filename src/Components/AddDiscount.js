@@ -1,7 +1,7 @@
 import React from 'react'
 
 const handleClick = (e) => {
-    alert("successfully created discount");
+    alert("testing create discount");
 }
 
 function AddDiscount() {
