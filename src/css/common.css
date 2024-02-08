@@ -1,0 +1,155 @@
+.App {
+  text-align: center;
+}
+
+/* header and heading */
+.dashboard-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px; */
+  background-color: #ffa246;
+  color: #070707;
+}
+
+.godine-logo{
+  display: block;
+  width: 7%;
+  height: 7%;
+  margin-left: 2%;
+  min-height: auto;
+}
+
+.dashboard-heading {
+  text-align: center;
+  font-size: 36px;
+  margin: 0 auto;
+}
+
+/* dropdown css */
+.dropdown-hover {
+  position: relative;
+  display: inline-block;
+  margin-right: 2.5%;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 5%;
+  min-width: 10rem;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-hover:hover .dropdown-menu {
+  display: block;
+}
+
+/* profile icon */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 82%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-image {
+  max-width: fit-content;
+  height: auto;
+}
+
+.profile-text {
+  font-size: 14px;
+}
+
+/* card */
+.card{
+  margin: 30px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s; 
+}
+
+.card:hover {
+  background-color: #fbf4ec;
+}
+
+.card-title{
+  text-align: center;
+}
+
+.top-button{
+  margin: 7%;
+}
+
+.bottom-button{
+  margin: 7%;
+}
+
+.btn-primary {
+  background-color: #e6892d;
+  border-color: #e6892d; 
+  color: #fff;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ff4400;
+  border-color: #ff4400;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* general */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-heading {
+      font-size: 28px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .godine-logo{
+    display: block;
+    width: 13%;
+    height: 13%;
+  }
+
+  .card{
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .dashboard-heading {
+      font-size: 24px; 
+  }
+
+  .godine-logo{
+    display: block;
+    width: 20%;
+    height: 20%;
+  }  
+
+  .profile-section {
+    padding: 5px;
+    width: 75%;
+    height: auto;
+  }
+  .profile-icon {
+      width: fit-content;
+  }
+  .profile-text {
+      font-size: 14px;
+  }
+}
