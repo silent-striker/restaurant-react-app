@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Assignment 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- _Date Created_: 7 FEB 2024
+- _Last Modification Date_: 8 FEB 2024
+- _Assignment URL_: https://priyatamsomagattu-assignment1.netlify.app/
+- _Git URL_: https://git.cs.dal.ca/somagattu/csci-5709-assignments
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+- [Priyatam Reddy Somagattu](pr889078@dal.ca)
 
-### `npm start`
+## Deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I imported an existing front-end project from GitHub to Netlify, where I had a repository prepared. Then, I configured the build settings to deploy the application. Eventually, the app was successfully deployed and is now live at the provided link.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- [React](https://legacy.reactjs.org/docs/getting-started.html/) - The web framework used
+- [Bootstrap](https://getbootstrap.com/) - CSS Library
+- [npm](https://docs.npmjs.com//) - Dependency Management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Sources Used
 
-### `npm run build`
+### Header.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*Lines 12-23*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+    <div className="dropdown-hover">
+        <button className="btn btn-transparent profile-section" type="button">
+            <img src={profile_image} alt="logo" className="profile-image"/>
+            <span className="profile-text">Profile</span>
+        </button>
+        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button className="dropdown-item">View Profile</button>
+            <button className="dropdown-item">Edit Profile</button>
+            <div className="dropdown-divider"></div>
+            <button className="dropdown-item" onClick={() => alert("clicked on logout button")}>Logout</button>
+        </div>
+    </div>
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The code was created by adapting dropdown menu from [Official - Bootstrap dropdown documentation](https://getbootstrap.com/docs/4.0/components/dropdowns/)
 
-### `npm run eject`
+```
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- After understanding the code in [Official - Bootstrap dropdown documentation](https://getbootstrap.com/docs/4.0/components/dropdowns/). I adapted the code for profile dropdown using button and changing the css of the hover dropdown to suit my need.
+- I had a vague idea about dropdown but didn't know how to start and what was the structure of the code. The [Official - Bootstrap dropdown documentation](https://getbootstrap.com/docs/4.0/components/dropdowns/)'s dropdown code was a good reference as I thought it was necessary for a profile dropdown menu.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Restaurants.js
+*Lines 5-16*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+    <div className="card">
+        <div className="card-body">
+            <h5 className="card-title">Restaurants</h5>
+            <div className="top-button">
+                <button className="btn btn-primary" onClick={() => alert("View All button was clicked")}>View All</button>
+            </div>
+            
+            <div className='bottom-button'>
+                <button className="btn btn-primary" onClick={() => alert("Request button was clicked")}>Requests</button>
+            </div>
+        </div>
+    </div>
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The code was created by adapting dropdown menu from [Official - Bootstrap cards documentation](https://getbootstrap.com/docs/4.0/components/card/).
 
-## Learn More
+```
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div>
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- I decided to use [Official - Bootstrap cards documentation](https://getbootstrap.com/docs/4.0/components/card/) as a reference because I knew previously that cards are a great way to create sections to make the website have clear division.
+- The admin dashboard component needed such clear sections that is both responsive and neatly organised.
+- I adapted the above code to create components of individual sections for which I could use it and changed the CSS accordingly.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Rewards.js
+*Lines 1-20*
+```
+    import React from 'react'
 
-### Code Splitting
+    function Rewards() {
+     return (
+        <div className="card">
+        <div className="card-body">
+            <h5 className="card-title">Rewards</h5>
+            <div className="top-button">
+                <button className="btn btn-primary" onClick={() => alert("Edit rewards button was clicked")}>Edit Rewards</button>
+            </div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+            <div className="bottom-button">
+                <button className="btn btn-primary" onClick={() => alert("Assign Points button was clicked")}>Assign Points</button>
+            </div>
+        </div>
+        </div>
+    );
+}
 
-### Analyzing the Bundle Size
+export default Rewards;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The above code was created by adapting from the [W3Schools documentation](https://www.w3schools.com/react/react_components.asp).
 
-### Making a Progressive Web App
+```
+    function Car() {
+        return <h2>Hi, I am a Car!</h2>;
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+export default Car;
+```
 
-### Advanced Configuration
+- Using the above code as reference I was able to build on it to understand how to write react functional components.
+- This code is important as it is the fundamental structure of a react component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The code provided valuable insights and served as a foundation for understanding and learning it's functionality and logic. I am grateful for their work and dedication.
+- It provided valuable insights and influenced my approach in understanding and learning the approaches and specific techniques. Their contribution is highly appreciated.
